@@ -2,7 +2,7 @@
 <head>
 <script>
 function log10(a) {
-return Math.log(a)/Math.log(10);
+	return Math.log(a)/Math.log(10);
 }
 function format(a) {
 if(a < 1000) return Math.round(a);
@@ -59,6 +59,8 @@ function buy(n) {
 		update("m"+n,format(game.multipliers[n-1]));
 		update("p"+n,game.progress[n-1]);
 	}
+
+
 update("coinbox",format(coins));
 update("i"+(n-1),format(incomes[n-1]));
 update("c"+n,format(costs[n-1]));

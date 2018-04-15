@@ -53,7 +53,8 @@ function buy(n) {
 			game.progress[n-1]=0;
 			game.incomes[n-1] = game.incomes[n-1]*1.5;
 		}
-		update("coinbox",format(game.coins));
+		{
+			update("coinbox",format(game.coins));
 		update("i"+(n-1),format(game.incomes[n-1]));
 		update("c"+n,format(game.costs[n-1]));
 		update("a"+n,format(game.amounts[n-1]));

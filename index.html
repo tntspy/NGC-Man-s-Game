@@ -11,12 +11,12 @@ var mantissa = Math.round(1000*Math.pow(10,log10(a)-exponent))/1000;
 return mantissa+"e"+exponent
 }
 var coins = 1;
-var incomes = [0,0,0,0,0,0,0,0]
-var costs = [1,100,1e4,1e7,1e10,1e14,1e18,1e23]
-var costmult = [2,3,5,7,10,20,50,100]
-var amounts = [0,0,0,0,0,0,0,0]
-var multipliers = [1,1,1,1,1,1,1,1]
-var progress = [0,0,0,0,0,0,0,0]
+var incomes = [0,0,0,0,0,0,0,0,0]
+var costs = [1,100,1e4,1e7,1e10,1e14,1e18,1e24,1e30]
+var costmult = [2,3,5,7,10,20,50,100,2]
+var amounts = [0,0,0,0,0,0,0,0,0]
+var multipliers = [1,1,1,1,1,1,1,1,1]
+var progress = [0,0,0,0,0,0,0,0,0]
 function update(set,get){
 	document.getElementById(set).innerHTML=get
 }

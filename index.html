@@ -10,9 +10,9 @@ var exponent = Math.floor(log10(a));
 var mantissa = Math.round(1000*Math.pow(10,log10(a)-exponent))/1000;
 return mantissa+"e"+exponent
 }
-var coins = 1;
+var coins = 10;
 var incomes = [0,0,0,0,0,0,0,0,0,0]
-var costs = [1,100,1e4,1e6,1e9,5e13,1e18,1e24, 1e28, 1e33]
+var costs = [10,100,1e4,1e6,1e9,5e13,1e18,1e24, 1e28, 1e33]
 var costmult = [2,2,2,2,2,2,2,2,2,2]
 var amounts = [0,0,0,0,0,0,0,0,0,0]
 var multipliers = [1,1,1,1,1,1,1,1,1,1]
@@ -28,7 +28,7 @@ amounts[0]+=1;
 costs[0]=costs[0]*costmult[0];
 progress[0]++;
 incomes[0]+=multipliers[1];
-if(progress[0]==8) {
+if(progress[0]==10) {
 multipliers[0]++;
 incomes[0] = incomes[0]*multipliers[0]/(multipliers[0]-1);
 progress[0]=0;
@@ -68,6 +68,7 @@ update("incomebox",format(incomes[0]));
 for(i=1;i<=10;i++) update("a"+i,format(amounts[i-1]));
 for(i=1;i<=9;i++) update("i"+i,format(incomes[i]));
 }
+setInterval(step,1000);
 </script>
 <title>Nintendo Gamecube Man's Incremental game</title>
 </head>

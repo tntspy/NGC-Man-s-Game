@@ -21,6 +21,7 @@ var game = {
 function update(set,get){
 	document.getElementById(set).innerHTML=get
 }
+function buy(n) {
 	if(n==1) {
 		if(game.costs[0]>game.coins) return 0;
 		game.coins-=game.costs[0];
